@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-feed
-        image: duyto/udagram-api-feed:v1
+        image: duyto/udagram-api-feed:v5
         volumeMounts:
         - name: aws-credentials-volume
           mountPath: /root/.aws
