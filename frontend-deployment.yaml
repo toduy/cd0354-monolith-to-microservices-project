@@ -16,7 +16,14 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: duyto/udagram-frontend:v3
+        image: duyto/udagram-frontend:v5
         ports:
         - containerPort: 80
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
+          limits:
+            memory: "1024Mi"
+            cpu: "500m"  
 

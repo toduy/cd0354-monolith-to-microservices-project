@@ -4,10 +4,10 @@ metadata:
   name: env-configmap
   namespace: default
 data:
-  POSTGRES_HOST: 
-  POSTGRES_DB: project3db
-  AWS_BUCKET: arn:aws:s3:::dtq-project3-bucket
-  AWS_BUCKET_NAME: dtq-project3-bucket
+  POSTGRES_HOST: <host>
+  POSTGRES_DB: dbname
+  AWS_BUCKET: arn:aws:s3:::bucket-name
+  AWS_BUCKET_NAME: bucket-name
   AWS_REGION: us-east-2
   AWS_PROFILE: default
   JWT_SECRET: testing1
