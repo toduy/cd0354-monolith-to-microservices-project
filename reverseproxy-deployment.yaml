@@ -18,5 +18,5 @@ spec:
       - name: reverseproxy
         image: duyto/reverseproxy:v1
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 

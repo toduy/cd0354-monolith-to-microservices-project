@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: duyto/udagram-frontend:v2
+        image: duyto/udagram-frontend:v3
         ports:
         - containerPort: 80
 
