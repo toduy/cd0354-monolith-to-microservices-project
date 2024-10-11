@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+  namespace: default
+data:
+  POSTGRES_HOST: 
+  POSTGRES_DB: project3db
+  AWS_BUCKET: arn:aws:s3:::dtq-project3-bucket
+  AWS_BUCKET_NAME: dtq-project3-bucket
+  AWS_REGION: us-east-2
+  AWS_PROFILE: default
+  JWT_SECRET: testing1
+  URL: http://localhost:8100
