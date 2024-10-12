@@ -17,6 +17,13 @@ spec:
       containers:
       - name: backend-user
         image: duyto/udagram-api-user:v1
+        resources:
+          requests:
+            memory: "2048Mi"        # Minimum memory request
+            cpu: "500m"            # Minimum CPU request
+          limits:
+            memory: "4096Mi"        # Maximum memory limit
+            cpu: "1"
         volumeMounts:
         - name: aws-credentials-volume
           mountPath: /root/.aws/credentials

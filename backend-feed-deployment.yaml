@@ -5,7 +5,7 @@ metadata:
   labels:
     app: backend-feed
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: backend-feed
@@ -17,6 +17,13 @@ spec:
       containers:
       - name: backend-feed
         image: duyto/udagram-api-feed:v1
+        resources:
+          requests:
+            memory: "2048Mi"        # Minimum memory request
+            cpu: "500m"            # Minimum CPU request
+          limits:
+            memory: "4096Mi"        # Maximum memory limit
+            cpu: "1"
         volumeMounts:
         - name: aws-credentials-volume
           mountPath: /root/.aws/credentials
@@ -74,13 +81,6 @@ spec:
               key: POSTGRES_PASSWORD
         ports:
         - containerPort: 8080
-        resources:
-          requests:
-            memory: "1024Mi"
-            cpu: "1"
-          limits:
-            memory: "2048Mi"
-            cpu: "2"  
         livenessProbe:
           httpGet:
             path: /api/v0/feed
